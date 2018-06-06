@@ -17,6 +17,7 @@
         </head>
     </xsl:template>
 
+    <!-- transform right-justified p element into p element with @rend="right" -->
     <xsl:template match="p[@style = 'text-align:right;']">
         <p rend="right">
             <xsl:apply-templates/>
