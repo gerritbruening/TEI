@@ -24,6 +24,16 @@
         </p>
     </xsl:template>
 
+    <xsl:template match="hi[@rend = 'footnote_reference']">
+        <ref type="footnote">
+            <xsl:apply-templates/>
+        </ref>
+    </xsl:template>
+
+    <xsl:template match="seg[@style = 'font-size:10pt']">
+        <xsl:apply-templates/>
+    </xsl:template>
+
     <!-- Pass through unchanged everything else. -->
     <xsl:template match="node() | @*">
         <xsl:copy copy-namespaces="no">
